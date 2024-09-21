@@ -30,8 +30,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-["data['DateTime'] = pd.to_datetime(data['Date'] + ' ' + data['Time'])", '', '# Crear la gráfica', 'plt.figure(figsize=(20, 6))', "sns.lineplot(x=data['DateTime'], y=data['Temp (°C)'], marker='o', markersize=4)"]
+["data['DateTime'] = pd.to_datetime(data['Date'] + ' ' + data['Time'])", '', '', 'plt.figure(figsize=(20, 6))', "sns.lineplot(x=data['DateTime'], y=data['Temp (°C)'], marker='o', markersize=4)"]
 ...
-['# Ajustar el diseño para que las etiquetas no se corten', 'plt.tight_layout()', '', '# Mostrar la gráfica', 'plt.show()']
+["plt.xlabel('Tiempo (mes-año)', fontsize=12)", "plt.ylabel('Temperatura (°C)', fontsize=12)", 'plt.xticks(rotation=45)', 'plt.tight_layout()', 'plt.show()']
 -------------------
 

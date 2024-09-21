@@ -586,29 +586,105 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DateTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">])</span>
 
-<span class="c1"># Crear la gráfica</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DateTime&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Temp (°C)&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="c1"># Personalizar el eje X para que muestre las etiquetas por mes</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">MonthLocator</span><span class="p">())</span>  <span class="c1"># Etiquetas por mes</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%m-%Y&#39;</span><span class="p">))</span>  <span class="c1"># Formato mes-año (mes en número)</span>
-
-<span class="c1"># Personalizar la gráfica</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">MonthLocator</span><span class="p">())</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%m-%Y&#39;</span><span class="p">))</span>  
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Temperatura en función del tiempo&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tiempo (mes-año)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperatura (°C)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-
-<span class="c1"># Rotar las etiquetas del eje X para mejor legibilidad</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
-
-<span class="c1"># Ajustar el diseño para que las etiquetas no se corten</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
-
-<span class="c1"># Mostrar la gráfica</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                      </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;DateTime&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">sns</span><span class="o">.</span><span class="n">lineplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DateTime&#39;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Temp (°C)&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">MonthLocator</span><span class="p">())</span>  
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%m-%Y&#39;</span><span class="p">))</span>  
+
+<span class="nn">File ~\anaconda3\envs\ml_venv\lib\site-packages\seaborn\relational.py:645,</span> in <span class="ni">lineplot</span><span class="nt">(data, x, y, hue, size, style, units, palette, hue_order, hue_norm, sizes, size_order, size_norm, dashes, markers, style_order, estimator, errorbar, n_boot, seed, orient, sort, err_style, err_kws, legend, ci, ax, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span> <span class="n">color</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;color&quot;</span><span class="p">,</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">_default_color</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">,</span> <span class="n">hue</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">645</span> <span class="n">p</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">646</span> <span class="k">return</span> <span class="n">ax</span>
+
+<span class="nn">File ~\anaconda3\envs\ml_venv\lib\site-packages\seaborn\relational.py:441,</span> in <span class="ni">_LinePlotter.plot</span><span class="nt">(self, ax, kws)</span>
+<span class="g g-Whitespace">    </span><span class="mi">438</span>     <span class="n">grouped</span> <span class="o">=</span> <span class="n">sub_data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">orient</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">sort</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">439</span>     <span class="c1"># Could pass as_index=False instead of reset_index,</span>
+<span class="g g-Whitespace">    </span><span class="mi">440</span>     <span class="c1"># but that fails on a corner case with older pandas.</span>
+<span class="ne">--&gt; </span><span class="mi">441</span>     <span class="n">sub_data</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">agg</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">442</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">443</span>     <span class="n">sub_data</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">other</span><span class="si">}</span><span class="s2">min&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+<span class="nn">File ~\anaconda3\envs\ml_venv\lib\site-packages\pandas\core\groupby\groupby.py:1765,</span> in <span class="ni">GroupBy.apply</span><span class="nt">(self, func, *args, **kwargs)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1763</span> <span class="k">with</span> <span class="n">option_context</span><span class="p">(</span><span class="s2">&quot;mode.chained_assignment&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">1764</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1765</span>         <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_python_apply_general</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_selected_obj</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1766</span>     <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1767</span>         <span class="c1"># gh-20949</span>
+<span class="g g-Whitespace">   </span><span class="mi">1768</span>         <span class="c1"># try again, with .apply acting as a filtering</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1772</span>         <span class="c1"># fails on *some* columns, e.g. a numeric operation</span>
+<span class="g g-Whitespace">   </span><span class="mi">1773</span>         <span class="c1"># on a string grouper column</span>
+<span class="g g-Whitespace">   </span><span class="mi">1775</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_python_apply_general</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_obj_with_exclusions</span><span class="p">)</span>
+
+<span class="nn">File ~\anaconda3\envs\ml_venv\lib\site-packages\pandas\core\groupby\groupby.py:1814,</span> in <span class="ni">GroupBy._python_apply_general</span><span class="nt">(self, f, data, not_indexed_same, is_transform, is_agg)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1779</span> <span class="nd">@final</span>
+<span class="g g-Whitespace">   </span><span class="mi">1780</span> <span class="k">def</span> <span class="nf">_python_apply_general</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1781</span>     <span class="bp">self</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1786</span>     <span class="n">is_agg</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1787</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">NDFrameT</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1788</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1789</span><span class="sd">     Apply function f in python space</span>
+<span class="g g-Whitespace">   </span><span class="mi">1790</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1812</span><span class="sd">         data after applying f</span>
+<span class="g g-Whitespace">   </span><span class="mi">1813</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1814</span>     <span class="n">values</span><span class="p">,</span> <span class="n">mutated</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">grouper</span><span class="o">.</span><span class="n">apply_groupwise</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1815</span>     <span class="k">if</span> <span class="n">not_indexed_same</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1816</span>         <span class="n">not_indexed_same</span> <span class="o">=</span> <span class="n">mutated</span>
+
+<span class="nn">File ~\anaconda3\envs\ml_venv\lib\site-packages\pandas\core\groupby\ops.py:895,</span> in <span class="ni">BaseGrouper.apply_groupwise</span><span class="nt">(self, f, data, axis)</span>
+<span class="g g-Whitespace">    </span><span class="mi">892</span> <span class="c1"># This calls DataSplitter.__iter__</span>
+<span class="g g-Whitespace">    </span><span class="mi">893</span> <span class="n">zipped</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">group_keys</span><span class="p">,</span> <span class="n">splitter</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">895</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">zipped</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">896</span>     <span class="c1"># Pinning name is needed for</span>
+<span class="g g-Whitespace">    </span><span class="mi">897</span>     <span class="c1">#  test_group_apply_once_per_group,</span>
+<span class="g g-Whitespace">    </span><span class="mi">898</span>     <span class="c1">#  test_inconsistent_return_type, test_set_group_name,</span>
+<span class="g g-Whitespace">    </span><span class="mi">899</span>     <span class="c1">#  test_group_name_available_in_inference_pass,</span>
+<span class="g g-Whitespace">    </span><span class="mi">900</span>     <span class="c1">#  test_groupby_multi_timezone</span>
+<span class="g g-Whitespace">    </span><span class="mi">901</span>     <span class="nb">object</span><span class="o">.</span><span class="fm">__setattr__</span><span class="p">(</span><span class="n">group</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">903</span>     <span class="c1"># group might be modified</span>
+
+<span class="nn">File ~\anaconda3\envs\ml_venv\lib\site-packages\pandas\core\groupby\ops.py:1149,</span> in <span class="ni">DataSplitter.__iter__</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1146</span> <span class="n">starts</span><span class="p">,</span> <span class="n">ends</span> <span class="o">=</span> <span class="n">lib</span><span class="o">.</span><span class="n">generate_slices</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_slabels</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ngroups</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1148</span> <span class="k">for</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">starts</span><span class="p">,</span> <span class="n">ends</span><span class="p">):</span>
+<span class="ne">-&gt; </span><span class="mi">1149</span>     <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">_chop</span><span class="p">(</span><span class="n">sdata</span><span class="p">,</span> <span class="nb">slice</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">))</span>
+
+<span class="nn">File ~\anaconda3\envs\ml_venv\lib\site-packages\pandas\core\groupby\ops.py:1175,</span> in <span class="ni">FrameSplitter._chop</span><span class="nt">(self, sdata, slice_obj)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span> <span class="k">def</span> <span class="nf">_chop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sdata</span><span class="p">:</span> <span class="n">DataFrame</span><span class="p">,</span> <span class="n">slice_obj</span><span class="p">:</span> <span class="nb">slice</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DataFrame</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span>     <span class="c1"># Fastpath equivalent to:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span>     <span class="c1"># if self.axis == 0:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span>     <span class="c1">#     return sdata.iloc[slice_obj]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span>     <span class="c1"># else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1174</span>     <span class="c1">#     return sdata.iloc[:, slice_obj]</span>
+<span class="ne">-&gt; </span><span class="mi">1175</span>     <span class="n">mgr</span> <span class="o">=</span> <span class="n">sdata</span><span class="o">.</span><span class="n">_mgr</span><span class="o">.</span><span class="n">get_slice</span><span class="p">(</span><span class="n">slice_obj</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">axis</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="n">df</span> <span class="o">=</span> <span class="n">sdata</span><span class="o">.</span><span class="n">_constructor_from_mgr</span><span class="p">(</span><span class="n">mgr</span><span class="p">,</span> <span class="n">axes</span><span class="o">=</span><span class="n">mgr</span><span class="o">.</span><span class="n">axes</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1177</span>     <span class="k">return</span> <span class="n">df</span><span class="o">.</span><span class="n">__finalize__</span><span class="p">(</span><span class="n">sdata</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;groupby&quot;</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+<img alt="_images/980038c66ac4c2d0c470e4a4c94260365b780a246bd2e31223fa7abc2f61c9db.png" src="_images/980038c66ac4c2d0c470e4a4c94260365b780a246bd2e31223fa7abc2f61c9db.png" />
 </div>
 </div>
 <p>La mediciones empezaron en diciembre del 2012 y terminaron en marzo del 2015.
@@ -619,32 +695,22 @@ De la gráfica podemos identificar en la mitad del año, entre los meses de juni
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;%Y/%m/</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="c1"># Agrupar por &#39;Site&#39; y &#39;Date&#39; para calcular el promedio de temperatura diario</span>
-<span class="n">daily_avg_temp</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Site&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">])[</span><span class="s1">&#39;Temp (°C)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 
-<span class="c1"># Obtener una lista de sitios únicos</span>
+<span class="n">daily_avg_temp</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Site&#39;</span><span class="p">,</span> <span class="s1">&#39;Date&#39;</span><span class="p">])[</span><span class="s1">&#39;Temp (°C)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
 <span class="n">sites</span> <span class="o">=</span> <span class="n">daily_avg_temp</span><span class="p">[</span><span class="s1">&#39;Site&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 
-<span class="c1"># Generar un gráfico para cada sitio</span>
 <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="n">sites</span><span class="p">:</span>
     <span class="n">site_data</span> <span class="o">=</span> <span class="n">daily_avg_temp</span><span class="p">[</span><span class="n">daily_avg_temp</span><span class="p">[</span><span class="s1">&#39;Site&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">site</span><span class="p">]</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
     
-    <span class="c1"># Graficar los datos</span>
+    
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">site_data</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> <span class="n">site_data</span><span class="p">[</span><span class="s1">&#39;Temp (°C)&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span><span class="n">markersize</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Promedio diario de temperatura - </span><span class="si">{</span><span class="n">site</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Mes y Año&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperatura (°C)&#39;</span><span class="p">)</span>
-    
-    <span class="c1"># Configurar el formato del eje x para mostrar meses y años</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%b %Y&#39;</span><span class="p">))</span>
-    
-    <span class="c1"># Ajustar el intervalo de los ticks para que muestren los meses</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_locator</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">MonthLocator</span><span class="p">())</span>
-    
-    <span class="c1"># Rotar las etiquetas del eje x para mejor legibilidad</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
-    
     <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
