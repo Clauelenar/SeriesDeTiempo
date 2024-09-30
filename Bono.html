@@ -1,0 +1,1014 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Bono 1 &#8212; Tarea 1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Bono';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Tarea 1</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Claudia Elena Rueda Londoño
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="tarea1.html">Tarea 1 parte 1</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Bono.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bono 1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-de-entrenamiento">Datos de entrenamiento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-expoloratorio">Análisis Expoloratorio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos">Modelos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-de-prueba">Datos de Prueba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prueba">Prueba</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bono-1">
+<h1>Bono 1<a class="headerlink" href="#bono-1" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.holtwinters</span> <span class="kn">import</span> <span class="n">ExponentialSmoothing</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.holtwinters</span> <span class="kn">import</span> <span class="n">SimpleExpSmoothing</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="datos-de-entrenamiento">
+<h2>Datos de entrenamiento<a class="headerlink" href="#datos-de-entrenamiento" title="Link to this heading">#</a></h2>
+<p>Corresponden al comportamiento de la potenica según la señal de voltaje suministrada en una microturbina de gas.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">carpeta</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\claud\OneDrive - Universidad del Norte\Escritorio\Series de tiempo\bono\train&quot;</span>
+<span class="n">lis</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># leer todos los archivos de la carpeta train</span>
+<span class="k">for</span> <span class="n">arch</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">carpeta</span><span class="p">):</span>
+    
+    <span class="n">archivo</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">carpeta</span><span class="p">,</span> <span class="n">arch</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">arch</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#agregar indicatvo del experimento </span>
+    <span class="n">lis</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># Combinar todos los DataFrames </span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">lis</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">train</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>time</th>
+      <th>input_voltage</th>
+      <th>el_power</th>
+      <th>exp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>810.07028</td>
+      <td>10.00</td>
+      <td>1228.791720</td>
+      <td>ex_1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>811.06938</td>
+      <td>10.00</td>
+      <td>1223.041745</td>
+      <td>ex_1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>812.06848</td>
+      <td>10.00</td>
+      <td>1244.960866</td>
+      <td>ex_1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>813.06758</td>
+      <td>10.00</td>
+      <td>1229.259058</td>
+      <td>ex_1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>814.06668</td>
+      <td>10.00</td>
+      <td>1248.117024</td>
+      <td>ex_1</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>52935</th>
+      <td>12632.84000</td>
+      <td>7.24</td>
+      <td>2358.536920</td>
+      <td>ex_9</td>
+    </tr>
+    <tr>
+      <th>52936</th>
+      <td>12633.84000</td>
+      <td>7.24</td>
+      <td>2481.489028</td>
+      <td>ex_9</td>
+    </tr>
+    <tr>
+      <th>52937</th>
+      <td>12634.84000</td>
+      <td>7.24</td>
+      <td>2327.054441</td>
+      <td>ex_9</td>
+    </tr>
+    <tr>
+      <th>52938</th>
+      <td>12635.84000</td>
+      <td>7.24</td>
+      <td>2451.061029</td>
+      <td>ex_9</td>
+    </tr>
+    <tr>
+      <th>52939</th>
+      <td>12636.84000</td>
+      <td>7.24</td>
+      <td>2336.952994</td>
+      <td>ex_9</td>
+    </tr>
+  </tbody>
+</table>
+<p>52940 rows × 4 columns</p>
+</div></div></div>
+</div>
+</section>
+<section id="analisis-expoloratorio">
+<h2>Análisis Expoloratorio<a class="headerlink" href="#analisis-expoloratorio" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">exp_value</span> <span class="ow">in</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="c1"># filtrar por experimento</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">exp_value</span><span class="p">]</span>
+    
+    <span class="c1"># Calcula estadísticas para la variable de respuesta </span>
+    <span class="n">mean_el_power</span> <span class="o">=</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">max_el_power</span> <span class="o">=</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="n">min_el_power</span> <span class="o">=</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+    <span class="n">std_el_power</span> <span class="o">=</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+    
+    <span class="c1"># Obtiene los valores únicos de la variable input_voltage</span>
+    <span class="n">unique_input_voltage</span> <span class="o">=</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;input_voltage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exp </span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s2"> - Media: </span><span class="si">{</span><span class="n">mean_el_power</span><span class="si">}</span><span class="s2">, Max: </span><span class="si">{</span><span class="n">max_el_power</span><span class="si">}</span><span class="s2">, Min: </span><span class="si">{</span><span class="n">min_el_power</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Exp </span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s2"> - Unique input_voltage: </span><span class="si">{</span><span class="n">unique_input_voltage</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="c1">#  gráficos</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>  
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Exp </span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Plot de el_power para Exp </span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;el_power&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exp ex_1 - Media: 2162.4278742355946, Max: 3249.89121738983, Min: 932.837260159588
+Exp ex_1 - Unique input_voltage: [10.  3.]
+</pre></div>
+</div>
+<img alt="_images/ecaa7328d2cebb837e8e04feedb21af263690462352b0e57e8579b58a1b54731.png" src="_images/ecaa7328d2cebb837e8e04feedb21af263690462352b0e57e8579b58a1b54731.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exp ex_20 - Media: 1623.2634935180495, Max: 3182.43106085729, Min: 1097.03079149941
+Exp ex_20 - Unique input_voltage: [ 3.   5.   7.5 10. ]
+</pre></div>
+</div>
+<img alt="_images/a85ac55d3474870fa3c1111558e54d6bcace2ae28c35017844b6e80c829254a6.png" src="_images/a85ac55d3474870fa3c1111558e54d6bcace2ae28c35017844b6e80c829254a6.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exp ex_21 - Media: 1576.4602774140983, Max: 3191.96680243227, Min: 1045.54102016552
+Exp ex_21 - Unique input_voltage: [ 3.   5.   7.5 10. ]
+</pre></div>
+</div>
+<img alt="_images/243a3dbb977dd781f4f537ee7a20f6eb83eec70816c5f001242a122525396a42.png" src="_images/243a3dbb977dd781f4f537ee7a20f6eb83eec70816c5f001242a122525396a42.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exp ex_23 - Media: 1899.2318467052246, Max: 3193.84635095489, Min: 1053.21830642725
+Exp ex_23 - Unique input_voltage: [3.         3.36842105 3.73684211 4.10526316 4.47368421 4.84210526
+ 5.21052632 5.57894737 5.94736842 6.31578947 6.68421053 7.05263158
+ 7.42105263 7.78947368 8.15789474 8.52631579 8.89473684 9.26315789
+ 9.63157895]
+</pre></div>
+</div>
+<img alt="_images/2ac80b915aea987df71b9750047b0f1fa66897a8afbad5b768671cb9401a5eca.png" src="_images/2ac80b915aea987df71b9750047b0f1fa66897a8afbad5b768671cb9401a5eca.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exp ex_24 - Media: 1805.375103910433, Max: 3191.10141553597, Min: 1054.17524996577
+Exp ex_24 - Unique input_voltage: [ 3.          3.36842105  3.73684211  4.10526316  4.47368421  4.84210526
+  5.21052632  5.57894737  5.94736842  6.31578947  6.68421053  7.05263158
+  7.42105263  7.78947368  8.15789474  8.52631579  8.89473684  9.26315789
+  9.63157895 10.        ]
+</pre></div>
+</div>
+<img alt="_images/47daf6756990c98ef5125f13e53f6b6c3e3051ab6352ad3c8cd071291fefdee8.png" src="_images/47daf6756990c98ef5125f13e53f6b6c3e3051ab6352ad3c8cd071291fefdee8.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Exp ex_9 - Media: 1828.5484538476937, Max: 2511.69826204778, Min: 1204.20567057897
+Exp ex_9 - Unique input_voltage: [3.445 3.855 4.305 4.785 5.29  5.79  6.245 6.615 6.88  7.055 7.165 7.24 ]
+</pre></div>
+</div>
+<img alt="_images/a5b0099704a75a8bc846564618b8da545a0dfe63e9db01161f173c59b8821fd3.png" src="_images/a5b0099704a75a8bc846564618b8da545a0dfe63e9db01161f173c59b8821fd3.png" />
+</div>
+</div>
+<p>Para el experimento 1, se realizó un cambio de voltaje entre 3 y 10.  se evidencia que la potencia se mantiene constante minetras no haya cambios de potencia.</p>
+<p>En el experiento 20 y 21 se utlizaron las mismas condiciones de voltaje, una serie cuadrada, iniciando con voltaje 3, subía y volvía a su base. los valores alos que se aumentó fueron   5,  7.5, 10. de forma ascendente.</p>
+<p>En el experimento 23 se aumentó en 4 ocaciones el voltaje gradualmente de 3 a 9.6 y luego bajandolo drasticamnete nuevamente a 3.</p>
+<p>En el experimento 24 se amumento y disminuyó el voltaje gardualmente dos veces.</p>
+<p>En el experiemento 9 se hizo el auento de manera escalonada y se ve como mientras se conserva el voltaje la potencia se mantiene constante</p>
+</section>
+<section id="modelos">
+<h2>Modelos<a class="headerlink" href="#modelos" title="Link to this heading">#</a></h2>
+<p>Para cada experimento, es decir cada conjunto de datos de entrenamiento se realizaran 4 modelos :
+-Suavización exponencial de primer orden
+-Suavización exponencial de segundo orden
+-Suavización exponencial de segundo orden con actualización del factor de descuento
+-Holt-Winters</p>
+<p>En total se tendran 24 modelos diferentes que se guardaran en el diccionario  <code class="docutils literal notranslate"><span class="pre">modelos</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">modelos</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># para cada experiemnto </span>
+<span class="k">for</span> <span class="n">exp_value</span> <span class="ow">in</span> <span class="n">train</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    
+    <span class="n">subset_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">train</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">exp_value</span><span class="p">]</span>
+    <span class="c1"># Extrae la serie temporal de &#39;el_power&#39;</span>
+    <span class="n">y_train</span> <span class="o">=</span> <span class="n">subset_train</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">]</span>
+    
+    <span class="c1"># Suavización exponencial de primer orden</span>
+    <span class="n">model_1st_order</span> <span class="o">=</span> <span class="n">SimpleExpSmoothing</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="n">modelos</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;1st_order_exp_</span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_1st_order</span>
+    
+    <span class="c1"># Suavización exponencial de segundo orden</span>
+    <span class="n">model_2nd_order</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="n">modelos</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;2nd_order_exp_</span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_2nd_order</span>
+    
+    <span class="c1"># Suavización exponencial de segundo orden con  factor de descuento</span>
+    <span class="n">model_2nd_order_discount</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">damped_trend</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="n">modelos</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;2nd_order_discount_exp_</span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_2nd_order_discount</span>
+    
+    <span class="c1"># Holt-Winters (suavización de triple nivel, aunque se usa solo el componente de tendencia)</span>
+    <span class="n">model_holt_winters</span> <span class="o">=</span> <span class="n">ExponentialSmoothing</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">trend</span><span class="o">=</span><span class="s1">&#39;add&#39;</span><span class="p">,</span> <span class="n">seasonal</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+    <span class="n">modelos</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;holt_winters_exp_</span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">model_holt_winters</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="datos-de-prueba">
+<h2>Datos de Prueba<a class="headerlink" href="#datos-de-prueba" title="Link to this heading">#</a></h2>
+<p>Se toman los experiemntos 4 y 22 como set de prueba</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">carpeta</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;C:\Users\claud\OneDrive - Universidad del Norte\Escritorio\Series de tiempo\bono\test&quot;</span>
+<span class="n">lis</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># leer todos los archivos de la carpeta train</span>
+<span class="k">for</span> <span class="n">arch</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">carpeta</span><span class="p">):</span>
+    
+    <span class="n">archivo</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">carpeta</span><span class="p">,</span> <span class="n">arch</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">archivo</span><span class="p">)</span>
+    <span class="n">data</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">arch</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="c1">#agregar indicatvo del experimento </span>
+    <span class="n">lis</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="c1"># Combinar todos los DataFrames en uno solo</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">lis</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">test</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>time</th>
+      <th>input_voltage</th>
+      <th>el_power</th>
+      <th>exp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>880.300000</td>
+      <td>3.0</td>
+      <td>1193.140713</td>
+      <td>ex_22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>881.300000</td>
+      <td>3.0</td>
+      <td>1107.066421</td>
+      <td>ex_22</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>882.300000</td>
+      <td>3.0</td>
+      <td>1180.406767</td>
+      <td>ex_22</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>883.300000</td>
+      <td>3.0</td>
+      <td>1095.551498</td>
+      <td>ex_22</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>884.300000</td>
+      <td>3.0</td>
+      <td>1177.073719</td>
+      <td>ex_22</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>18280</th>
+      <td>10541.535214</td>
+      <td>3.0</td>
+      <td>2373.250274</td>
+      <td>ex_4</td>
+    </tr>
+    <tr>
+      <th>18281</th>
+      <td>10542.534511</td>
+      <td>3.0</td>
+      <td>2429.362888</td>
+      <td>ex_4</td>
+    </tr>
+    <tr>
+      <th>18282</th>
+      <td>10543.533807</td>
+      <td>3.0</td>
+      <td>2369.397892</td>
+      <td>ex_4</td>
+    </tr>
+    <tr>
+      <th>18283</th>
+      <td>10544.533103</td>
+      <td>3.0</td>
+      <td>2419.959332</td>
+      <td>ex_4</td>
+    </tr>
+    <tr>
+      <th>18284</th>
+      <td>10545.532399</td>
+      <td>3.0</td>
+      <td>2350.035327</td>
+      <td>ex_4</td>
+    </tr>
+  </tbody>
+</table>
+<p>18285 rows × 4 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">test</span><span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Recorre cada valor único de la columna &#39;exp&#39;</span>
+<span class="k">for</span> <span class="n">exp_value</span> <span class="ow">in</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+    <span class="c1"># Filtra los datos para cada valor de &#39;exp&#39;</span>
+    <span class="n">subset</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">exp_value</span><span class="p">]</span>
+    
+    <span class="c1"># Haz el plot con &#39;time&#39; en el eje X y las demás columnas en Y</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">subset</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">],</span> <span class="n">subset</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Exp </span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>  <span class="c1"># Reemplaza &#39;some_column&#39; con la columna de interés</span>
+    
+
+    <span class="c1"># Añadir título y etiquetas</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Plot de train en función de time por exp&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Valores de la columna seleccionada&#39;</span><span class="p">)</span>
+
+    <span class="c1"># Añadir la leyenda</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+    <span class="c1"># Mostrar el gráfico</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1000x600 with 0 Axes&gt;
+</pre></div>
+</div>
+<img alt="_images/db50c89aa261f9e911829ff4ad8d263017653f2d133a47419d37267bf52eecfa.png" src="_images/db50c89aa261f9e911829ff4ad8d263017653f2d133a47419d37267bf52eecfa.png" />
+<img alt="_images/b6f88c7a6df7209a169fff821c1c65ca0acd2d82f99c6b3910b922e466263dc5.png" src="_images/b6f88c7a6df7209a169fff821c1c65ca0acd2d82f99c6b3910b922e466263dc5.png" />
+</div>
+</div>
+<p>Para el experimento 4 se puede decir que los modelos que mejor se ajustaran serán aquellos realizados para los modelos 20 y 21 pues conservan la estructura similar en donde se aumenta, baja y luego aumneta un poco más, haciendo una oscilación caad avez más amplia, con una tendecia a la alza.</p>
+<p>Para el experimneto 22, aunque en los experimentos de entrenamiento no se evidencia un patrón similar podemos inferir que tendrá cercania con las series expuestas en los experimentos 23 y 24.</p>
+</section>
+<section id="prueba">
+<h2>Prueba<a class="headerlink" href="#prueba" title="Link to this heading">#</a></h2>
+<p>Se aplicó cada modelo del diccionario modelos para cada conjunto de prueba y según ña metrica RMSE se determinará cual es el mejor y si las inferencias realizadas anteriormente fueorn válidas.</p>
+<p>Se mostrará la gráfica con los valores reales y la preddición, además del valor de la métrica RMSE(debajo del título)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">resultados</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">mejores_modelos</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Para cada experimento de prueba se hará la aplicación de los 24 modelos entrenados</span>
+<span class="k">for</span> <span class="n">exp_value</span> <span class="ow">in</span> <span class="n">test</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    
+    <span class="n">subset_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">exp_value</span><span class="p">]</span>
+    <span class="n">y_test</span> <span class="o">=</span> <span class="n">subset_test</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;EXPERIMENTO </span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="n">mejor_rmse</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+    <span class="n">mejor_modelo</span> <span class="o">=</span> <span class="kc">None</span>
+    
+    <span class="k">for</span> <span class="n">model_name</span><span class="p">,</span> <span class="n">model</span> <span class="ow">in</span> <span class="n">modelos</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        
+        <span class="c1"># Realiza la predicción </span>
+        <span class="n">pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        
+        <span class="c1"># Calcular RMSE</span>
+        <span class="n">rmse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">((</span><span class="n">pred</span> <span class="o">-</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">))</span>
+        
+        <span class="k">if</span> <span class="n">exp_value</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">resultados</span><span class="p">:</span>
+            <span class="n">resultados</span><span class="p">[</span><span class="n">exp_value</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">resultados</span><span class="p">[</span><span class="n">exp_value</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">model_name</span><span class="p">,</span> <span class="n">rmse</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Modelo: </span><span class="si">{</span><span class="n">model_name</span><span class="si">}</span><span class="s2"> - RMSE: </span><span class="si">{</span><span class="n">rmse</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        
+    
+        <span class="k">if</span> <span class="n">rmse</span> <span class="o">&lt;</span> <span class="n">mejor_rmse</span><span class="p">:</span>
+            <span class="n">mejor_rmse</span> <span class="o">=</span> <span class="n">rmse</span>
+            <span class="n">mejor_modelo</span> <span class="o">=</span> <span class="n">model_name</span>
+    
+    <span class="n">mejores_modelos</span><span class="p">[</span><span class="n">exp_value</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">mejor_modelo</span><span class="p">,</span> <span class="n">mejor_rmse</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EXPERIMENTO ex_4
+Modelo: 1st_order_exp_ex_1 - RMSE: 375.0486
+Modelo: 2nd_order_exp_ex_1 - RMSE: 375.0457
+Modelo: 2nd_order_discount_exp_ex_1 - RMSE: 375.0433
+Modelo: holt_winters_exp_ex_1 - RMSE: 375.0457
+Modelo: 1st_order_exp_ex_20 - RMSE: 203.7595
+Modelo: 2nd_order_exp_ex_20 - RMSE: 290.3479
+Modelo: 2nd_order_discount_exp_ex_20 - RMSE: 209.0946
+Modelo: holt_winters_exp_ex_20 - RMSE: 290.3479
+Modelo: 1st_order_exp_ex_21 - RMSE: 237.0531
+Modelo: 2nd_order_exp_ex_21 - RMSE: 256.3624
+Modelo: 2nd_order_discount_exp_ex_21 - RMSE: 234.8606
+Modelo: holt_winters_exp_ex_21 - RMSE: 256.3624
+Modelo: 1st_order_exp_ex_23 - RMSE: 232.2924
+Modelo: 2nd_order_exp_ex_23 - RMSE: 303.4507
+Modelo: 2nd_order_discount_exp_ex_23 - RMSE: 246.6412
+Modelo: holt_winters_exp_ex_23 - RMSE: 303.4507
+Modelo: 1st_order_exp_ex_24 - RMSE: 226.7208
+Modelo: 2nd_order_exp_ex_24 - RMSE: 150.5894
+Modelo: 2nd_order_discount_exp_ex_24 - RMSE: 214.9609
+Modelo: holt_winters_exp_ex_24 - RMSE: 150.5894
+Modelo: 1st_order_exp_ex_9 - RMSE: nan
+Modelo: 2nd_order_exp_ex_9 - RMSE: nan
+Modelo: 2nd_order_discount_exp_ex_9 - RMSE: nan
+Modelo: holt_winters_exp_ex_9 - RMSE: nan
+EXPERIMENTO ex_22
+Modelo: 1st_order_exp_ex_1 - RMSE: 1225.0324
+Modelo: 2nd_order_exp_ex_1 - RMSE: 1225.2571
+Modelo: 2nd_order_discount_exp_ex_1 - RMSE: 1225.2167
+Modelo: holt_winters_exp_ex_1 - RMSE: 1225.2571
+Modelo: 1st_order_exp_ex_20 - RMSE: 787.9346
+Modelo: 2nd_order_exp_ex_20 - RMSE: 794.3230
+Modelo: 2nd_order_discount_exp_ex_20 - RMSE: 790.4963
+Modelo: holt_winters_exp_ex_20 - RMSE: 794.3230
+Modelo: 1st_order_exp_ex_21 - RMSE: 824.7146
+Modelo: 2nd_order_exp_ex_21 - RMSE: 825.8569
+Modelo: 2nd_order_discount_exp_ex_21 - RMSE: 824.0567
+Modelo: holt_winters_exp_ex_21 - RMSE: 825.8569
+Modelo: 1st_order_exp_ex_23 - RMSE: nan
+Modelo: 2nd_order_exp_ex_23 - RMSE: nan
+Modelo: 2nd_order_discount_exp_ex_23 - RMSE: nan
+Modelo: holt_winters_exp_ex_23 - RMSE: nan
+Modelo: 1st_order_exp_ex_24 - RMSE: nan
+Modelo: 2nd_order_exp_ex_24 - RMSE: nan
+Modelo: 2nd_order_discount_exp_ex_24 - RMSE: nan
+Modelo: holt_winters_exp_ex_24 - RMSE: nan
+Modelo: 1st_order_exp_ex_9 - RMSE: nan
+Modelo: 2nd_order_exp_ex_9 - RMSE: nan
+Modelo: 2nd_order_discount_exp_ex_9 - RMSE: nan
+Modelo: holt_winters_exp_ex_9 - RMSE: nan
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Mejor modelo para cada subconjunto de prueba</span>
+<span class="k">for</span> <span class="n">exp_value</span><span class="p">,</span> <span class="p">(</span><span class="n">mejor_modelo</span><span class="p">,</span> <span class="n">mejor_rmse</span><span class="p">)</span> <span class="ow">in</span> <span class="n">mejores_modelos</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;El mejor modelo para Exp </span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="s2"> es </span><span class="si">{</span><span class="n">mejor_modelo</span><span class="si">}</span><span class="s2"> con un RMSE de </span><span class="si">{</span><span class="n">mejor_rmse</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    
+    <span class="n">subset_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s1">&#39;exp&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">exp_value</span><span class="p">]</span>
+    <span class="n">y_test</span> <span class="o">=</span> <span class="n">subset_test</span><span class="p">[</span><span class="s1">&#39;el_power&#39;</span><span class="p">]</span>
+    <span class="n">time_test</span> <span class="o">=</span> <span class="n">subset_test</span><span class="p">[</span><span class="s1">&#39;time&#39;</span><span class="p">]</span>
+    
+    <span class="n">model</span> <span class="o">=</span> <span class="n">modelos</span><span class="p">[</span><span class="n">mejor_modelo</span><span class="p">]</span>
+    <span class="n">pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="c1">#Gráfica</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Real&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time_test</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Predicción (</span><span class="si">{</span><span class="n">mejor_modelo</span><span class="si">}</span><span class="s1">)&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Comparación de </span><span class="si">{</span><span class="n">mejor_modelo</span><span class="si">}</span><span class="s2"> con los datos reales - Exp </span><span class="si">{</span><span class="n">exp_value</span><span class="si">}</span><span class="se">\n</span><span class="s2">RMSE: </span><span class="si">{</span><span class="n">mejor_rmse</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tiempo&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Potencia Eléctrica (el_power)&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El mejor modelo para Exp ex_4 es 2nd_order_exp_ex_24 con un RMSE de 150.59
+</pre></div>
+</div>
+<img alt="_images/001be2b8cfc0f6ff9b98e73b97d7cd6ab892f6fa9f18511e1aa142c1786bd27d.png" src="_images/001be2b8cfc0f6ff9b98e73b97d7cd6ab892f6fa9f18511e1aa142c1786bd27d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El mejor modelo para Exp ex_22 es 1st_order_exp_ex_20 con un RMSE de 787.93
+</pre></div>
+</div>
+<img alt="_images/e3d242352bbb749590b561a883d6417cedee443a9e7637fd6002b704fa640970.png" src="_images/e3d242352bbb749590b561a883d6417cedee443a9e7637fd6002b704fa640970.png" />
+</div>
+</div>
+<p>Los reusltados nos muestran que para el experiemnto 4 el mejor modelo fue la ``suavización exponencial de segundo orden del exp. 24<code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">para</span> <span class="pre">el</span> <span class="pre">experimento</span> <span class="pre">22</span> <span class="pre">fue</span> <span class="pre">la</span></code>suavización exponencial de primer orden del experiemnto 20`. Los resulatdos no fueron los esperados a partir de analisis visual hecho anteriormente. Además los modelos que mejor se ajustaron a cada subconjunto de test no siguen el mismo patron en el tiempo que cualquiera de los experiemntos utilizados en el entrenamiento de los modelos por lo que era de esperarse que la serie real y la predicción no fueran parecidas</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-de-entrenamiento">Datos de entrenamiento</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analisis-expoloratorio">Análisis Expoloratorio</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modelos">Modelos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-de-prueba">Datos de Prueba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prueba">Prueba</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Claudia Rueda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
